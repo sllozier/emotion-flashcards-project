@@ -23,6 +23,7 @@ const AllCards = () => {
             <div className='cards' key={`All Cards ${card.id}`}>
               <Link to={`/cards/${card.id}`}>
                 <h3>{card.name}</h3>
+                <img src={`/${card.front}`}/>
               </Link>
               <hr/>
             </div>

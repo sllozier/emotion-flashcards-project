@@ -32,6 +32,7 @@ export const fetchAllCards = () => {
 export const cardsReducer = (state = [], action) => {
   switch (action.type) {
     case SET_CARDS:
+      console.log('CARDSACTION', action.cards);
       return action.cards;
     default:
       return state;

@@ -2544,7 +2544,9 @@ var AllCards = function AllCards() {
       key: "All Cards ".concat(card.id)
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
       to: "/cards/".concat(card.id)
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, card.name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("hr", null));
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, card.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+      src: "/".concat(card.front)
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("hr", null));
   }) : null);
 };
 
@@ -2579,14 +2581,9 @@ var SingleCard = function SingleCard() {
   var card = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
     return state.card;
   });
-  console.log('ISCARD?', card);
-  console.log('PARAMS', params);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     dispatch((0,_store_singleCardReducer__WEBPACK_IMPORTED_MODULE_2__.fetchOneCard)(params.cardId));
-  }, []); //^^^^ This is setting campusId to null in the database but I can't get the browser to update.
-  //I am moving on to other areas of the project so I don't waste time here FOREVERRR...
-  //I looked at creating a useState but couldn't quite get it going.    
-
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     key: card.cardId,
     id: "single-campus",
@@ -2594,7 +2591,9 @@ var SingleCard = function SingleCard() {
   }, card ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "single-campus-detail",
     className: "row"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: "/".concat(card.front)
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "column mr1"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, card.name))) : 'Card Not Found', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("hr", null));
 };
@@ -2676,6 +2675,7 @@ var cardsReducer = function cardsReducer() {
 
   switch (action.type) {
     case SET_CARDS:
+      console.log('CARDSACTION', action.cards);
       return action.cards;
 
     default:
