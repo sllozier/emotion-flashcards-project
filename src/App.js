@@ -1,10 +1,6 @@
 import React from "react";
-import { BrowserRouter } from 'react-router-dom';
-import  AllStudents from './components/AllStudents';
-import AllCampuses from './components/AllCampuses';
-import SingleStudent from "./components/SingleStudent";
-import SingleCampus from './components/SingleCampus';
-import Navbar from './components/Navbar';
+import  AllCards from './components/AllCards';
+import SingleCard from './components/SingleCard';
 import { Routes, Route } from 'react-router-dom';
 
 function App(){
@@ -14,17 +10,17 @@ function App(){
        <div id='main'>
             <div className='column container'>
                 <div id='header'>
-                    <h1>ACME School Management System</h1>
-                    <Navbar/>
+                    <h1>Emotion Flashcards</h1>
+                    
                 </div>
             </div>
 
             <Routes>
-                <Route path='/students' element={<AllStudents/>}/>
-                <Route path='/campuses' element={<AllCampuses/>}/>
-                <Route path='/students/:studentId/' element={<SingleStudent/>}/>
-                <Route path='/campuses/:campusId/' element={<SingleCampus/>}/>
-                <Route path='/' element={<AllCampuses/>}/>
+                <Route path='/cards' element={<AllCards/>}/>
+                {/* <Route path='/campuses' element={<AllCampuses/>}/>
+                <Route path='/students/:studentId/' element={<SingleStudent/>}/> */}
+                <Route path='/cards/:cardId/' element={<SingleCard/>}/>
+                <Route path='/' element={<AllCards/>}/>
             </Routes>
        </div>
        

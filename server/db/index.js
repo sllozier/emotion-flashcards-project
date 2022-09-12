@@ -2,92 +2,222 @@
 // with your models, for which you'll find some blank files in this directory:
 
 const db = require('./database')
-const Student = require('./Student')
-const Campus = require('./Campus')
+const Card = require('./Card')
 
-Campus.hasMany(Student);
-Student.belongsTo(Campus);
 
 const syncAndSeed = async () => {
     await db.sync({ force: true });
 
-    const library = await Campus.create({
-      name: 'Library', 
-      address: 'Next to janitors office',
-      description: 'The library has more than enough space as it spans two floors. There is a large open space in the center where students can work together or in small groups. The second floor has multiple rooms for small groups to work and is the perfect spot for Saturday detention.',
-      imageUrl: 'library.jpg',
-      })
-  
-  const parkingLot = await Campus.create({
-      name: 'Parking Lot',
-      address: 'Just outside Shermer High School',
-      description: 'This is where your detention begins folks. Leave all your dreams here and maybe you will get a kiss at the end of the day!',
-      imageUrl: 'parkingLot.jpg',
-  })
-  
-  const hallway = await Campus.create({
-      name: 'Hallway',
-      address: 'Just outside the doors of the library',
-      description: 'Freedom lies in the halls of Shermer High School. Beware! Prinicpal Dick is lurking! Hide your grass, man!',
-      imageUrl: 'hallway.jpg',
-  })
-  
-  const footballField = await Campus.create({
-      name: 'Football Field',
-      address: 'Across the parking lot from the school entrance',
-      description: 'You survived detention and got the girl. Pump that fist!',
-      imageUrl: 'footballField.jpg',
-  })
-  
-  await Student.create({
-      firstName: 'Brian',
-      lastName: 'Johnson',
-      email: 'brain@breakfastclub.com',
-      imageUrl:'brian.jpg',
-      gpa: 4.0,
-      campusId: parkingLot.id,
-      quote: "Dear Mr. Vernon, we accept the fact that we had to sacrifice a whole Saturday in detention for whatever it was we did wrong. What we did was wrong. But we think you're crazy to make us write an essay telling you who we think we are. What do you care? And you see us as you want to see us - in the simplest terms, in the most convenient definitions. You see us as a brain, an athlete, a basket case, a princess, and a criminal.",
-    })
-  
-  await Student.create({
-      firstName:'Andrew',
-      lastName:'Clark',
-      email:'athlete@breakfastclub.com',
-      imageUrl:'andrew.jpg',
-      gpa: 3.0,
-      campusId: hallway.id,
-      quote: "I'm not a winner because I want to be one. I'm a winner because I've got strength and speed... kinda like a racehorse. It's about how involved I am in what's happening to me.",
-    })
-  
-  await Student.create({
-      firstName: 'Allison',
-      lastName:'Reynolds',
-      email: 'basketCase@breakfastclub.com',
-      imageUrl: 'allison.jpg',
-      gpa: 2.8,
-      campusId: hallway.id,
-      quote: "I don't have to run away and live in the street. I can run away and I can go to the ocean, I can go to the country, I can go to the mountains. I could go to Israel, Africa, Afghanistan.",
-    })
-  
-  await Student.create({
-      firstName: 'Claire',
-      lastName: 'Standish',
-      email: 'princess@breakfastclub.com',
-      imageUrl: 'claire.jpg',
-      gpa: 3.5,
-      campusId: library.id,
-      quote: "I have just as, many feelings as you do and it hurts so much when someone steps all over them",
+    await Card.create({
+      name: "angry",
+      color: "red",
+      front: "angryfront.png",
+      back: "angryback.png",
     })
     
-  await Student.create({
-      firstName: 'John',
-      lastName: 'Bender',
-      email: 'criminal@breakfastclub.com',
-      imageUrl: 'bender.jpg',
-      gpa: 0.0,
-      campusId: footballField.id,
-      quote: "But face it. You’re a neo maxi zoom dweebie, what would you be doing if you weren’t out making yourself a better citizen?",
+    await Card.create({
+      name: "offended",
+      color: "red",
+      front: "offendedfront.png",
+      back: "offendedback.png",
     })
+    
+    await Card.create({
+      name: "irritable",
+      color: "red",
+      front: "irritablefront.png",
+      back: "irritableback.png",
+    })
+    
+    await Card.create({
+      name: "jealous",
+      color: "red",
+      front: "jealousfront.png",
+      back: "jealousback.png",
+    })
+    
+    await Card.create({
+      name: "frustrated",
+      color: "red",
+      front: "frustratedfront.png",
+      back: "frustratedback.png",
+    })
+    
+    await Card.create({
+      name: "disgusted",
+      color: "red",
+      front: "disgustedfront.png",
+      back: "disgustedback.png",
+    })
+    
+    await Card.create({
+      name: "excited",
+      color: "yellow",
+      front: "excitedfront.png",
+      back: "excitedback.png",
+    })
+    
+    await Card.create({
+      name: "confident",
+      color: "yellow",
+      front: "confidentfront.png",
+      back: "confidentback.png",
+    })
+    
+    await Card.create({
+      name: "happy",
+      color: "yellow",
+      front: "happyfront.png",
+      back: "happyback.png",
+    })
+    
+    await Card.create({
+      name: "hopeful",
+      color: "yellow",
+      front: "hopefulfront.png",
+      back: "hopefulback.png",
+    })
+    
+    await Card.create({
+      name: "loved",
+      color: "yellow",
+      front: "lovedfront.png",
+      back: "lovedback.png",
+    })
+    
+    await Card.create({
+      name: "grateful",
+      color: "yellow",
+      front: "gratefulfront.png",
+      back: "gratefulback.png",
+    })
+    
+    await Card.create({
+      name: "affectionate",
+      color: "yellow",
+      front: "affectionatefront.png",
+      back: "affectionateback.png",
+    })
+    
+    await Card.create({
+      name: "proud",
+      color: "yellow",
+      front: "proudfront.png",
+      back: "proudback.png",
+    })
+    
+    await Card.create({
+      name: "suspicious",
+      color: "purple",
+      front: "suspiciousfront.png",
+      back: "suspiciousback.png",
+    })
+      
+    await Card.create({
+      name: "worried",
+      color: "purple",
+      front: "worriedfront.png",
+      back: "worriedback.png",
+    })
+    
+    await Card.create({
+      name: "scared",
+      color: "purple",
+      front: "scaredfront.png",
+      back: "scaredback.png",
+    })
+    
+    await Card.create({
+      name: "nervous",
+      color: "purple",
+      front: "nervousfront.png",
+      back: "nervousback.png",
+    })
+    
+    await Card.create({
+      name: "shy",
+      color: "purple",
+      front: "shyfront.png",
+      back: "shyback.png",
+    })
+    
+    await Card.create({
+      name: "insecure",
+      color: "purple",
+      front: "insecurefront.png",
+      back: "insecureback.png",
+    })
+    
+    await Card.create({
+      name: "anxious",
+      color: "purple",
+      front: "anxiousfront.png",
+      back: "anxiousback.png",
+    })
+    
+    await Card.create({
+      name: "surprised",
+      color: "purple",
+      front: "surprisedfront.png",
+      back: "surprisedback.png",
+    })
+    
+    await Card.create({
+      name: "rejected",
+      color: "aqua",
+      front: "rejectedfront.png",
+      back: "rejectedback.png",
+    })
+    
+    await Card.create({
+      name: "disappointed",
+      color: "aqua",
+      front: "disappointedfront.png",
+      back: "disappointedback.png",
+    })
+    
+    await Card.create({
+      name: "sad",
+      color: "aqua",
+      front: "sadfront.png",
+      back: "sadback.png",
+    })
+    
+    await Card.create({
+      name: "bored",
+      color: "aqua",
+      front: "boredfront.png",
+      back: "boredback.png",
+    })
+    
+    await Card.create({
+      name: "hurt",
+      color: "aqua",
+      front: "hurtfront.png",
+      back: "hurtback.png",
+    })
+    
+    await Card.create({
+      name: "lonely",
+      color: "aqua",
+      front: "lonelyfront.png",
+      back: "lonelyback.png",
+    })
+    
+    await Card.create({
+      name: "guilty",
+      color: "aqua",
+      front: "guiltyfront.png",
+      back: "guiltyback.png",
+    })
+    
+    await Card.create({
+      name: "embarrassed",
+      color: "aqua",
+      front: "embarrassedfront.png",
+      back: "embarrassedback.png",
+    })
+
     console.log(`
     Seeding successful!
     Time for school!
@@ -99,7 +229,6 @@ const syncAndSeed = async () => {
 module.exports = {
   db,
   syncAndSeed,
-  Student,
-  Campus,
+  Card,
 
 }
