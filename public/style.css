@@ -18,7 +18,7 @@
     margin: 0;
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(45deg, #eee, #fff);
+    /* background: linear-gradient(45deg, #eee, #fff); */
     background-attachment: fixed;
     letter-spacing: 0.03em;
   }
@@ -240,3 +240,49 @@
     outline: 1px dashed;
     outline: 1px auto -webkit-focus-ring-color;
    }
+
+/* Dark Mode*/
+
+   #darkmode{
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    margin: 20px 0;
+  }
+  
+  #darkmode .dark {
+    background-color: #292c35;
+  }
+  #darkmode .checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+  
+  #darkmode .label {
+    width: 60px;
+    height: 30px;
+    background-color:#111;
+    display: flex;
+    border-radius:50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    transform: scale(1.5);
+    cursor: pointer;
+  }
+  
+  #darkmode .ball {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+  }
+  
+  #darkmode .checkbox:checked + .label .ball{
+    transform: translateX(24px);
+  }

@@ -1,15 +1,14 @@
 import {createStore, applyMiddleware, combineReducers} from "redux";
 import thunk from "redux-thunk";
 import { cardsReducer } from './cardsReducer';
+import { darkModeReducer } from "./darkModeReducer";
 import { singleCardReducer } from "./singleCardReducer";
-// import { studentsReducer } from "./studentsReducer";
-// import { singleStudentReducer } from "./singleStudentReducer";
+
 
 const rootReducer = combineReducers({
     cards: cardsReducer,
     card: singleCardReducer,
-    // students: studentsReducer,
-    // student: singleStudentReducer,
+    darkMode: darkModeReducer,
 })
 
 export const store = createStore(
