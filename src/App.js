@@ -1,6 +1,7 @@
 import React from "react";
 import  AllCards from './components/AllCards';
 import SingleCard from './components/SingleCard';
+
 import { Routes, Route } from 'react-router-dom';
 
 function App(){
@@ -11,7 +12,7 @@ function App(){
             <div className='column container'>
                 <div id='header'>
                     <h1>Emotion Flashcards</h1>
-                    
+                   
                 </div>
             </div>
 

@@ -219,4 +219,24 @@
     background-color: #333;
   }
 
-
+  .filter-wrapper {
+    position: relative;
+    display: inline-block;
+   }
+   .filter-button {
+    border-radius: 5px;
+    padding: 8px 16px;
+    background-color: #408aeb;
+    cursor: pointer;
+    font-weight: 500;
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+   }
+   .filter-button:hover {
+    background-color: #092b58;
+   }
+   .filter-button:focus {
+    outline: 1px dashed;
+    outline: 1px auto -webkit-focus-ring-color;
+   }
