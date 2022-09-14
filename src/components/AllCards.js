@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchAllCards } from '../store/cardsReducer';
 import { Link } from 'react-router-dom';
-
+import AOS from 'aos';
 
 
 const AllCards = () => {
@@ -46,7 +46,11 @@ const AllCards = () => {
         dispatch(fetchAllCards());
     }, [sort]);
 
-    
+    useEffect(() => {
+      AOS.init({
+        duration: 2000,
+      });
+    }, []);
 
    
     
@@ -69,9 +73,8 @@ const AllCards = () => {
           <div className='card-wrapper' key={`${card.id}`}>
             <div className='card'>
               <Link to={`/cards/${card.id}`}>
-                <img src={`/${card.front}`}/>
+                <img data-aos={'zoom-in'} src={`/${card.front}`}/>
               </Link>
-              <hr/>
             </div>
             </div>
           ))

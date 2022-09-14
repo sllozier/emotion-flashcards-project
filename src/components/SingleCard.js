@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { fetchOneCard } from '../store/singleCardReducer';
+import AOS from 'aos';
 
 
 
@@ -11,27 +12,36 @@ const SingleCard = () => {
     const dispatch = useDispatch();
     const params = useParams();
 
+    const [ flip, setFlip ] = useState(false);
+
     const  card = useSelector(state =>  state.card);
 
     useEffect(() => {
         dispatch(fetchOneCard(params.cardId));
     }, []);
 
-
+    useEffect(() => {
+        AOS.init({
+            duration: 2000
+        });
+    }, []);
     
     return (
-        <div key={card.cardId} id='single-campus' className='column'>
+        <>
+        
             
             { card ?
-                    <div id='single-campus-detail' className='row'>
+                <div key={card.cardId} className={`single-card ${flip ? "flip" : ""}`}>
+                    <div data-aos={'zoom-out'} className='single-card-front' onClick={() => setFlip(!flip)}>
                         <img src={`/${card.front}`}/>
-                        <div className='column mr1'>
-                        <h2>{card.name}</h2>
-                        </div>
                     </div>
+                    <div className='single-card-back' onClick={() => setFlip(!flip)}>
+                    <img src={`/${card.back}`}/>
+                </div>
+                </div>
                 : 'Card Not Found'}
-                        <hr/>
-        </div>
+        
+        </>
       );
     };
     
