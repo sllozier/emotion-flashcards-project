@@ -2689,13 +2689,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_icons_bs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-icons/bs */ "./node_modules/react-icons/bs/index.esm.js");
+/* harmony import */ var react_icons_bs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-icons/bs */ "./node_modules/react-icons/bs/index.esm.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_darkModeReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/darkModeReducer */ "./src/store/darkModeReducer.js");
+/* harmony import */ var _home_sarah_Fullstack_Stuff_SeniorPhase_AsyncProject_emotion_flashcards_project_public_darkrainbow_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./public/darkrainbow.png */ "./public/darkrainbow.png");
+/* harmony import */ var _home_sarah_Fullstack_Stuff_SeniorPhase_AsyncProject_emotion_flashcards_project_public_lightrainbow_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./public/lightrainbow.png */ "./public/lightrainbow.png");
 
 
 
 
+
+ // const darkRainbow = require('/home/sarah/Fullstack_Stuff/SeniorPhase/AsyncProject/emotion-flashcards-project/public/darkrainbow.png').default;
+// const lightRainbow = require('/home/sarah/Fullstack_Stuff/SeniorPhase/AsyncProject/emotion-flashcards-project/public/lightrainbow.png').default;
 
 var DarkMode = function DarkMode() {
   var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
@@ -2709,7 +2714,7 @@ var DarkMode = function DarkMode() {
   };
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    document.body.style.backgroundColor = isDarkMode ? '#292c35' : '#fff';
+    document.body.style.backgroundImage = isDarkMode ? "url(".concat(_home_sarah_Fullstack_Stuff_SeniorPhase_AsyncProject_emotion_flashcards_project_public_darkrainbow_png__WEBPACK_IMPORTED_MODULE_3__, ")") : "url(".concat(_home_sarah_Fullstack_Stuff_SeniorPhase_AsyncProject_emotion_flashcards_project_public_lightrainbow_png__WEBPACK_IMPORTED_MODULE_4__, ")");
     document.body.style.color = isDarkMode ? '#fff' : '#292c35';
   }, [isDarkMode]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -2723,9 +2728,9 @@ var DarkMode = function DarkMode() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
     htmlFor: "checkbox",
     className: "label"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_bs__WEBPACK_IMPORTED_MODULE_3__.BsMoonStarsFill, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_bs__WEBPACK_IMPORTED_MODULE_5__.BsMoonStarsFill, {
     color: "white"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_bs__WEBPACK_IMPORTED_MODULE_3__.BsFillSunFill, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_bs__WEBPACK_IMPORTED_MODULE_5__.BsFillSunFill, {
     color: "yellow"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "ball"
@@ -49824,6 +49829,28 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./public/darkrainbow.png":
+/*!********************************!*\
+  !*** ./public/darkrainbow.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "56500d82a157b23f45fe.png";
+
+/***/ }),
+
+/***/ "./public/lightrainbow.png":
+/*!*********************************!*\
+  !*** ./public/lightrainbow.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "264fdea5bb17a9d63845.png";
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
@@ -50041,6 +50068,26 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /******/ 			if (!module.children) module.children = [];
 /******/ 			return module;
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/

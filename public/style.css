@@ -18,8 +18,9 @@
     font-family: 'Open Sans', arial,sans-serif;
     height: 100%;
     width: 100%;
-    /* background: linear-gradient(45deg, #eee, #fff); */
-    /* background-attachment: fixed;
+    
+    /* background: linear-gradient(45deg, #eee, #fff);
+    background-attachment: fixed;
     letter-spacing: 0.03em; */
   }
   
@@ -347,7 +348,7 @@
     width: 30px;
     height: 30px;
     background-color: white;
-    position: absolute;
+    position: fixed;
     top: 2px;
     left: 2px;
     border-radius: 50%;

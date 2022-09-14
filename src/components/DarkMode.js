@@ -2,7 +2,10 @@ import React, { useEffect } from 'react';
 import { BsMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleDarkMode } from '../store/darkModeReducer';
-
+import darkRainbow from '/home/sarah/Fullstack_Stuff/SeniorPhase/AsyncProject/emotion-flashcards-project/public/darkrainbow.png';
+import lightRainbow from '/home/sarah/Fullstack_Stuff/SeniorPhase/AsyncProject/emotion-flashcards-project/public/lightrainbow.png';
+// const darkRainbow = require('/home/sarah/Fullstack_Stuff/SeniorPhase/AsyncProject/emotion-flashcards-project/public/darkrainbow.png').default;
+// const lightRainbow = require('/home/sarah/Fullstack_Stuff/SeniorPhase/AsyncProject/emotion-flashcards-project/public/lightrainbow.png').default;
 
 const DarkMode = () => {
     const dispatch = useDispatch();
@@ -17,7 +20,7 @@ const DarkMode = () => {
     };
 
     useEffect(() => {
-        document.body.style.backgroundColor = isDarkMode ? '#292c35' : '#fff';
+        document.body.style.backgroundImage = isDarkMode ? `url(${darkRainbow})` : `url(${lightRainbow})`;
         document.body.style.color = isDarkMode ? '#fff' : '#292c35';
     }, [isDarkMode]);
 
