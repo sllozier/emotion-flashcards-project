@@ -19,8 +19,6 @@ function App(){
 
             <Routes>
                 <Route path='/cards' element={<AllCards/>}/>
-                {/* <Route path='/campuses' element={<AllCampuses/>}/>
-                <Route path='/students/:studentId/' element={<SingleStudent/>}/> */}
                 <Route path='/cards/:cardId/' element={<SingleCard/>}/>
                 <Route path='/' element={<AllCards/>}/>
             </Routes>

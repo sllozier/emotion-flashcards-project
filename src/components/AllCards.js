@@ -57,25 +57,25 @@ const AllCards = () => {
 
   return (
     <>
-        <label htmlFor='filter-options'>Filter cards by:</label>
-        <select name='filter-options' onChange={handleOptions} defaultValue='none'>
-                <option value='red'>Red</option>
-                <option value='yellow'>Yellow</option>
-                <option value='purple'>Purple</option>
-                <option value='aqua'>Aqua</option>
-                <option value='none'>No sorting</option>
+    <div id='filter-wrap'>
+        <label htmlFor='filter-options' className='filter-label'>View Cards: </label>
+        <select name='filter-options' className='filter-options' onChange={handleOptions} defaultValue='none'>
+                <option value='red'>View Red Cards</option>
+                <option value='yellow'>View Yellow Cards</option>
+                <option value='purple'>View Purple Cards</option>
+                <option value='aqua'>View Aqua Cards</option>
+                <option value='none'>View All</option>
               </select>
               <input placeholder='search for card by name' value={search} onChange={handleChange}/>
+              </div>
         <div className='cards'>
       <div className='wrapper'>
       {cardsList
         ? cardsList.map((card) => (
           <div className='card-wrapper' key={`${card.id}`}>
-            <div className='card'>
               <Link to={`/cards/${card.id}`}>
                 <img data-aos={'zoom-in'} src={`/${card.front}`}/>
               </Link>
-            </div>
             </div>
           ))
       :null}

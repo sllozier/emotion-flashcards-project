@@ -2633,27 +2633,31 @@ var AllCards = function AllCards() {
       duration: 2000
     });
   }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
-    htmlFor: "filter-options"
-  }, "Filter cards by:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "filter-wrap"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+    htmlFor: "filter-options",
+    className: "filter-label"
+  }, "View Cards: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select", {
     name: "filter-options",
+    className: "filter-options",
     onChange: handleOptions,
     defaultValue: "none"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
     value: "red"
-  }, "Red"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+  }, "View Red Cards"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
     value: "yellow"
-  }, "Yellow"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+  }, "View Yellow Cards"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
     value: "purple"
-  }, "Purple"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+  }, "View Purple Cards"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
     value: "aqua"
-  }, "Aqua"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+  }, "View Aqua Cards"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
     value: "none"
-  }, "No sorting")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+  }, "View All")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     placeholder: "search for card by name",
     value: search,
     onChange: handleChange
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "cards"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "wrapper"
@@ -2661,14 +2665,12 @@ var AllCards = function AllCards() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: "card-wrapper",
       key: "".concat(card.id)
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-      className: "card"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
       to: "/cards/".concat(card.id)
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
       "data-aos": 'zoom-in',
       src: "/".concat(card.front)
-    }))));
+    })));
   }) : null)));
 };
 
@@ -2689,18 +2691,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_icons_bs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-icons/bs */ "./node_modules/react-icons/bs/index.esm.js");
+/* harmony import */ var react_icons_bs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-icons/bs */ "./node_modules/react-icons/bs/index.esm.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _store_darkModeReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/darkModeReducer */ "./src/store/darkModeReducer.js");
-/* harmony import */ var _home_sarah_Fullstack_Stuff_SeniorPhase_AsyncProject_emotion_flashcards_project_public_darkrainbow_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./public/darkrainbow.png */ "./public/darkrainbow.png");
-/* harmony import */ var _home_sarah_Fullstack_Stuff_SeniorPhase_AsyncProject_emotion_flashcards_project_public_lightrainbow_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./public/lightrainbow.png */ "./public/lightrainbow.png");
+/* harmony import */ var _store_cardsReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/cardsReducer */ "./src/store/cardsReducer.js");
+/* harmony import */ var _store_darkModeReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/darkModeReducer */ "./src/store/darkModeReducer.js");
+/* harmony import */ var _home_sarah_Fullstack_Stuff_SeniorPhase_AsyncProject_emotion_flashcards_project_public_darkbackground_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./public/darkbackground.png */ "./public/darkbackground.png");
+/* harmony import */ var _home_sarah_Fullstack_Stuff_SeniorPhase_AsyncProject_emotion_flashcards_project_public_lightbackground_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./public/lightbackground.png */ "./public/lightbackground.png");
 
 
 
 
 
- // const darkRainbow = require('/home/sarah/Fullstack_Stuff/SeniorPhase/AsyncProject/emotion-flashcards-project/public/darkrainbow.png').default;
-// const lightRainbow = require('/home/sarah/Fullstack_Stuff/SeniorPhase/AsyncProject/emotion-flashcards-project/public/lightrainbow.png').default;
+
+
 
 var DarkMode = function DarkMode() {
   var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
@@ -2710,11 +2713,11 @@ var DarkMode = function DarkMode() {
   var isDarkMode = mode.isDarkMode;
 
   var switchDarkMode = function switchDarkMode() {
-    isDarkMode ? dispatch((0,_store_darkModeReducer__WEBPACK_IMPORTED_MODULE_2__.toggleDarkMode)(false)) : dispatch((0,_store_darkModeReducer__WEBPACK_IMPORTED_MODULE_2__.toggleDarkMode)(true));
+    isDarkMode ? dispatch((0,_store_darkModeReducer__WEBPACK_IMPORTED_MODULE_3__.toggleDarkMode)(false)) : dispatch((0,_store_darkModeReducer__WEBPACK_IMPORTED_MODULE_3__.toggleDarkMode)(true));
   };
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    document.body.style.backgroundImage = isDarkMode ? "url(".concat(_home_sarah_Fullstack_Stuff_SeniorPhase_AsyncProject_emotion_flashcards_project_public_darkrainbow_png__WEBPACK_IMPORTED_MODULE_3__, ")") : "url(".concat(_home_sarah_Fullstack_Stuff_SeniorPhase_AsyncProject_emotion_flashcards_project_public_lightrainbow_png__WEBPACK_IMPORTED_MODULE_4__, ")");
+    document.body.style.backgroundImage = isDarkMode ? "url(".concat(_home_sarah_Fullstack_Stuff_SeniorPhase_AsyncProject_emotion_flashcards_project_public_darkbackground_png__WEBPACK_IMPORTED_MODULE_4__, ")") : "url(".concat(_home_sarah_Fullstack_Stuff_SeniorPhase_AsyncProject_emotion_flashcards_project_public_lightbackground_png__WEBPACK_IMPORTED_MODULE_5__, ")");
     document.body.style.color = isDarkMode ? '#fff' : '#292c35';
   }, [isDarkMode]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -2728,9 +2731,9 @@ var DarkMode = function DarkMode() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
     htmlFor: "checkbox",
     className: "label"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_bs__WEBPACK_IMPORTED_MODULE_5__.BsMoonStarsFill, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_bs__WEBPACK_IMPORTED_MODULE_6__.BsMoonStarsFill, {
     color: "white"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_bs__WEBPACK_IMPORTED_MODULE_5__.BsFillSunFill, {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_bs__WEBPACK_IMPORTED_MODULE_6__.BsFillSunFill, {
     color: "yellow"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "ball"
@@ -2797,7 +2800,9 @@ var SingleCard = function SingleCard() {
       duration: 2000
     });
   }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, card ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "single-card-wrapper"
+  }, card ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     key: card.cardId,
     className: "single-card ".concat(flip ? "flip" : "")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -49829,25 +49834,25 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./public/darkrainbow.png":
-/*!********************************!*\
-  !*** ./public/darkrainbow.png ***!
-  \********************************/
+/***/ "./public/darkbackground.png":
+/*!***********************************!*\
+  !*** ./public/darkbackground.png ***!
+  \***********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "56500d82a157b23f45fe.png";
+module.exports = __webpack_require__.p + "3a71d641bafae7f88715.png";
 
 /***/ }),
 
-/***/ "./public/lightrainbow.png":
-/*!*********************************!*\
-  !*** ./public/lightrainbow.png ***!
-  \*********************************/
+/***/ "./public/lightbackground.png":
+/*!************************************!*\
+  !*** ./public/lightbackground.png ***!
+  \************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "264fdea5bb17a9d63845.png";
+module.exports = __webpack_require__.p + "054460f3d24ed898d45d.png";
 
 /***/ }),
 

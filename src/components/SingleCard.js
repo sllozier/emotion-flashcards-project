@@ -27,7 +27,7 @@ const SingleCard = () => {
     }, []);
     
     return (
-        <>
+        <div className='single-card-wrapper'>
         
             
             { card ?
@@ -41,7 +41,7 @@ const SingleCard = () => {
                 </div>
                 : 'Card Not Found'}
         
-        </>
+        </div>
       );
     };
     
