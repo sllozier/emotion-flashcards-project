@@ -9,6 +9,7 @@ const AllCards = () => {
   const dispatch = useDispatch();
   const [ sort, setSort ] = useState('none');
   const [ search, setSearch ] = useState('');
+  
 
   const sortCards = (cardsArray, sortOption) => {
     switch(sortOption) {
@@ -29,6 +30,8 @@ const AllCards = () => {
         
     }
   }
+
+  
     
     const cardsList = sortCards(useSelector(state => state.cards || []), sort);
 
@@ -49,8 +52,7 @@ const AllCards = () => {
     
 
   return (
-    <div id='cards' className='column'>
-      <div className='column-list'>
+    <>
         <label htmlFor='filter-options'>Filter cards by:</label>
         <select name='filter-options' onChange={handleOptions} defaultValue='none'>
                 <option value='red'>Red</option>
@@ -60,19 +62,24 @@ const AllCards = () => {
                 <option value='none'>No sorting</option>
               </select>
               <input placeholder='search for card by name' value={search} onChange={handleChange}/>
+        <div className='cards'>
+      <div className='wrapper'>
       {cardsList
         ? cardsList.map((card) => (
-            <div className='cards' key={`All Cards ${card.id}`}>
+          <div className='card-wrapper' key={`${card.id}`}>
+            <div className='card'>
               <Link to={`/cards/${card.id}`}>
-                <h3>{card.name}</h3>
                 <img src={`/${card.front}`}/>
               </Link>
               <hr/>
             </div>
+            </div>
           ))
       :null}
-       </div> 
-    </div>
+      </div>
+      </div>
+    
+    </>
    )
 };
 

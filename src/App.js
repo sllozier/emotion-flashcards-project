@@ -9,7 +9,7 @@ function App(){
 
     return(
         
-       <div id='main'>
+       <div className='main'>
             <div className='column container'>
                 <div id='header'>
                     <h1>Emotion Flashcards</h1>
