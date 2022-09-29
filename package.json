@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A review time project",
   "engines": {
-    "node": "18.x"
+    "node": "16.x"
   },
   "main": "index.js",
   "scripts": {
