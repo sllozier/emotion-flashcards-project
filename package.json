@@ -2,6 +2,9 @@
   "name": "emotions_flashcards",
   "version": "0.0.1",
   "description": "A review time project",
+  "engines": {
+    "node": "18.x"
+  },
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint",
@@ -49,5 +52,6 @@
     "babel-loader": "8.2.5",
     "webpack": "^5.72.0",
     "webpack-dev-server": "^4.7.3"
-  }
+  },
+  
 }
