@@ -14,20 +14,23 @@ app.use(volleyball)
 
 app.use('/api', require('./api'))
 
+
+
+app.get('/', (req, res, next) => {
+    res.sendFile(path.join(__dirname, '..', 'public/index.html'))
+});
+
+
+app.get('*', (req, res, next) => {
+    res.sendFile(path.join(__dirname, '..', '/public/index.html' ))
+});
+
 app.use((req, res, next) => {
-    if(path.extname(req.path).length > 0) {
+    if(path.extname(req.path).length) {
         res.status(404).end()
     }else {
         next()
     }
-});
-
-app.get('/', (req, res, next) => {
-    res.sendFile(path.join(__dirname, '..', 'src', 'index.html'))
-})
-
-app.get('*', (req, res, next) => {
-    res.sendFile(path.join(__dirname, '..', '/public/index.html' ))
 });
 
 app.use((err, req, res, next) => {
