@@ -3,4 +3,5 @@ node_modules
 .idea
 .excalidraw
 public/bundle.js
-public/bundle.js.map
+public/bundle.js.mapnode_modules
+npm-debug.log
