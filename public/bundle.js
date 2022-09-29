@@ -2515,7 +2515,7 @@ function App() {
   })));
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App); //
 
 /***/ }),
 
