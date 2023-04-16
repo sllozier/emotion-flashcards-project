@@ -1,6 +1,10 @@
-# Emotions Flashcards Website
+<h1 align="center">Emotions Flashcards Website</h1>
 
-[![view-img](public/svgs/emotionFlashcards.svg)](https://emotionsflashcards.com/)
+<div align="center">
+<a href="https://emotionsflashcards.com/">
+    <img alt="Emotions Flashcards" src="public/piccies/emotionFlashcards.svg" />
+  </a>
+</div>
 
 ---
 
