@@ -2,7 +2,7 @@
 
 <div align="center">
 <a href="https://emotionsflashcards.com/">
-    <img alt="Emotions Flashcards" src="public/piccies/emotionFlashcards.svg" />
+    <img alt="Emotions Flashcards" src="public/svgs/emotionFlashcards.svg" />
   </a>
 </div>
 
